@@ -9,7 +9,7 @@ git-client-package:
 
 hwass-source:
   git.latest:
-    - name : https://github.com/floyd-may/hwaas.git
+    - name : https://github.com/dvopsway/hwaas.git
     - rev : master
     - target : /home/hwass/hwass-site
 
