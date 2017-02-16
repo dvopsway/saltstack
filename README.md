@@ -1,8 +1,8 @@
 # Saltstack Playground
 
-This project can you with a environment when you can perform you salt server and minion tests.
+This project can help you with a environment where you can perform your salt server and minion tests.
 
-# Dependency
+## Dependency
 
 Install vagrant vbguest plugin, this is needed to sync folders
 
@@ -10,7 +10,7 @@ Install vagrant vbguest plugin, this is needed to sync folders
 vagrant plugin install vagrant-vbguest
 ```
 
-# Seting up environment
+## Seting up environment
 
 - Go inside server directory and run vagrant up, wait for it to finish.
 
