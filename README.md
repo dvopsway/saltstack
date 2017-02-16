@@ -34,12 +34,13 @@ vagrant ssh
 $ sudo salt-key -a minion
 ```
 
-
-- Now go to /srv/salt for code. and try apply salt state to minion, it should work.
+- Now go to /srv/salt for code. and try applying salt state to minion, it should work.
 
 ```
 $ cd /srv/salt
 $ sudo salt "minion" state.apply
 ```
+
+- If everything is successful, you should see "hello world" app at https://192.168.22.11:8000 on your host machine. Not critical though, if it doesn't work :P, a successful apply of state is good enough to verify thee setup.
 
 - Great now your testing environment is up :).
