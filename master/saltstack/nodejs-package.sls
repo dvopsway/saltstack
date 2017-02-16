@@ -1,11 +1,10 @@
-#nodejs-repo:
-#  pkgrepo.managed:
-#    - humanname : nodejs nodesource repo
-#    - mirrorlist : https://rpm.nodesource.com/pub_6.x/el/6/$basearch
-#    - gpgcheck : 0
+nodejs-repo:
+  cmd.run:
+    - name : curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+    - creates : /etc/yum.repos.d/nodesource-el.repo
 
 nodejs:
   pkg:
     - installed
-#    - require:
-#      - pkgrepo: nodejs-repo
+    - require:
+      - cmd: nodejs-repo

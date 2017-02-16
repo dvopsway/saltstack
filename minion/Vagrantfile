@@ -115,4 +115,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+  config.vm.provision "shell",
+    inline: "curl -L https://bootstrap.saltstack.com -o /home/vagrant/install_salt.sh && sh /home/vagrant/install_salt.sh -A 192.168.33.10 -i minion"
 end

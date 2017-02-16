@@ -115,9 +115,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
-  config.vbguest.iso_path = "http://download.virtualbox.org/virtualbox/4.3.36/VBoxGuestAdditions_4.3.36.iso" 
-  config.vbguest.auto_update = true
-
-  # do NOT download the iso file from a webserver
-  config.vbguest.no_remote = false
-end
+  config.vm.provision "shell",
+    inline: "curl -L https://bootstrap.saltstack.com -o /home/vagrant/install_salt.sh && sh /home/vagrant/install_salt.sh -M -A 127.0.0.1"
+end 
