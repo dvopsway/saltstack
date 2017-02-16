@@ -1,4 +1,4 @@
 base:
   '*':
     - nodejs-package
-    - hwass-site
+    - hwass-service

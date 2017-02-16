@@ -1,3 +1,6 @@
+include:
+  - nodejs-package
+
 hwass-user:
   user.present:
     - name : hwass
@@ -12,6 +15,9 @@ hwass-source:
     - name : https://github.com/dvopsway/hwaas.git
     - rev : master
     - target : /home/hwass/hwass-site
+    - require:
+      - user: hwass-user
+      - pkg: git-client-package
 
 hwass-npm-install:
   cmd.wait:
